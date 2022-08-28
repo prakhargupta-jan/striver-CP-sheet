@@ -15,18 +15,18 @@ int main()
     {
         cin >> arr[i];
         
-        if (arr[i] < mn) {
+        if (arr[i] <= mn) {
             mn = arr[i];
             mnPos = i;
         }
     }
     for (int i = n-1; i >= 0; i--) {
-        if (arr[i] > mx) {
+        if (arr[i] >= mx) {
             mx = arr[i];
             mxPos = i;
         }
     }
-    if (mxPos > mnPos) { 
+    if (mxPos < mnPos) { 
         cout << mxPos - 0 + n-1 - mnPos << endl;
     } else {
         cout << mxPos - 0 + n-1 - mnPos - 1 << endl;
