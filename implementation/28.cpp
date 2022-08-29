@@ -11,9 +11,9 @@ int main()
     cin >> s;
     string sln;
     for (int i = 0; i < s.length(); i++) {
-        if (s[i] == 'a' or s[i] == 'e' or s[i] == 'i' or s[i] == 'o' or s[i] == 'u' or s[i] == 'A' or s[i] == 'E' or s[i] == 'I' or s[i] == 'O' or s[i] == 'U')
+        if (s[i] == 'a' or s[i] == 'e' or s[i] == 'i' or s[i] == 'o' or s[i] == 'u' or s[i] == 'A' or s[i] == 'E' or s[i] == 'I' or s[i] == 'O' or s[i] == 'U' or s[i] == 'Y' or s[i] == 'y')
             continue;
-        if (s[i] >= 'A' or s[i] <= 'Z') {
+        if (s[i] >= 'A' and s[i] <= 'Z') {
             sln+= '.';
             sln+= s[i] - 'A' + 'a';
         } else {
