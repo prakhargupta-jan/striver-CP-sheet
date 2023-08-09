@@ -13,11 +13,36 @@ int main()
         int n;
         cin >> n;
         cout << 2 << endl;
-        vector<int> heap(n);
-        for (int i = 1; i <= n; i++) {
-            cin >> heap[i];
+        if (n == 2) {
+            cout << 2 << endl;
+            cout << 1 << ' ' << 2 << endl;
+            continue;
         }
-        make_heap(heap.begin(), heap.end());
+        if (n == 3) {
+            cout << 2 << endl;
+            cout << 3 << ' ' << 1 << endl;
+            cout << 2 << ' ' << 2 << endl;
+            continue;
+        }
+        int x = n-2, y = n;
+        int k = x;
+        bool puchka = true;
+        while (y != 0) {
+            if (puchka) {
+                puchka = false;
+                cout << x << ' ' << y << endl;
+                x++;
+                y--;
+                continue;
+            }
+            if (y == k) {
+                y--;
+                x++;
+            }
+            cout << x << ' ' << y << endl;
+            x--;
+            y--;
+        } 
         
     }
 

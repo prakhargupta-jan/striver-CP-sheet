@@ -1,6 +1,5 @@
 /*                 Prakhar is a Free Soul                      */
 #include <bits/stdc++.h>
-// Pending
 typedef long long int ll;
 using namespace std;
 
@@ -10,8 +9,12 @@ int main()
     int t;
     cin >> t;
     while (t--) {
-        int a, b, c;
+        ll a, b, c;
         cin >> a >> b >> c;
+        ll slnA = -1, slnB = -1;
+        if (a < c) slnA = 1;
+        if (a*b > c) slnB = b;
+        cout << slnA << ' ' << slnB << endl;
     }
     
 
